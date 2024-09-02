@@ -6,16 +6,6 @@
 - Run `npm run dev` to start the dev server
 - Open `http://localhost:5173` in a browser
 
-### Dev Container
-
-There is a dev container preconfigured with Node 20 on linux. If you would like to use the dev container:
-
-- Install the [Dev Containers Plugin](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) for VS Code
-- Open the command pallet (Cntrl / Command + Shift + P) in VS Code
-- Select "Dev Container: Reopen in Container"
-
-For more information on using dev containers see this [tutorial](https://atlas-jswank.github.io/blog/dev-containers/) or the [official documentation](https://containers.dev/)
-
 ### Important Files/Folders
 
 - `index.html`: This is the html file that appears when the dev server starts up.
