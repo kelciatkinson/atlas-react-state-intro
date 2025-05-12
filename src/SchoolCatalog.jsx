@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 export default function SchoolCatalog() {
   const [courses, setCourses] = useState([]);
   const [filter, setFilter] = useState("");
-  const filteredCourses = courses.filter((course) =>
-    course.courseName.toLowerCase().includes(filter.toLowerCase())
+  const filteredCourses = courses.filter(
+    (course) =>
+      course.courseName.toLowerCase().includes(filter.toLowerCase()) ||
+      course.courseNumber.toLowerCase().includes(filter.toLowerCase())
   );
 
   useEffect(() => {
