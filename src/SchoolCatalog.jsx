@@ -4,7 +4,7 @@ export default function SchoolCatalog() {
   const [courses, setCourses] = useState([]);
   const [filter, setFilter] = useState("");
   const filteredCourses = courses.filter((course) =>
-    course.courseName.toLowerCase().startsWith(filter.toLowerCase())
+    course.courseName.toLowerCase().includes(filter.toLowerCase())
   );
 
   useEffect(() => {
