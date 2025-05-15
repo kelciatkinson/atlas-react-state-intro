@@ -50,7 +50,15 @@ export default function SchoolCatalog() {
 
   const { enrolled, setEnrolled } = useContext(AppContext);
 
-  function enrollCounter() {}
+  const enrollCounter = (course) => {
+    const alreadyEnrolled = enrolled.some(
+      (enrolledCourse) => enrolledCourse.courseNumber === course.courseNumber
+    );
+
+    if (!alreadyEnrolled) {
+      setEnrolled([...enrolled, course]);
+    }
+  };
 
   useEffect(() => {
     setPage(1);
@@ -98,7 +106,7 @@ export default function SchoolCatalog() {
               <td>{course.semesterCredits}</td>
               <td>{course.totalClockHours}</td>
               <td>
-                <button onClick={enrollCounter()}>Enroll</button>
+                <button onClick={() => enrollCounter(course)}>Enroll</button>
               </td>
             </tr>
           ))}
